@@ -1,0 +1,96 @@
+body {
+    font-family: Arial;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #main-heading {
+    text-align: center;
+    color: #333;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  #todo-input,
+  #todo-date {
+    font-size: 15px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s; 
+    margin-left: 46px;/* Added transition for hover effect */
+  }
+  
+  #todo-input:hover,
+  #todo-date:hover {
+    border-color: #5cb85c; /* Change border color on hover */
+  }
+  
+  .btn-delete,
+  .btn-todo {
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition for hover effect */
+    width: 50%;
+    box-sizing: border-box;
+    margin-left: 120px;
+  }
+  
+  .btn-delete {
+    background-color: #d9534f;
+    color: #fff;
+  }
+  
+  .btn-todo {
+    background-color: #5cb85c;
+    color: #fff;
+  }
+  
+  .btn-delete:hover,
+  .btn-todo:hover {
+    background-color: darken(#5cb85c, 10%);
+    transform: scale(1.05); /* Added scale effect on hover */
+  }
+  
+  .todo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .todo-item {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  .todo-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
